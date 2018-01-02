@@ -1,2 +1,2 @@
 # npm-require
-synchronous global require function for the browser
+commonjs module loader (simplified npm & synchronous global require function for the browser)

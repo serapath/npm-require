@@ -1,0 +1,31 @@
+{
+  "name": "npm-require",
+  "version": "1.0.0",
+  "description": "commonjs module loader (simplified npm & synchronous global require function for the browser)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serapath/npm-require.git"
+  },
+  "keywords": [
+    "npm",
+    "install",
+    "require",
+    "browser",
+    "browserify",
+    "package.json",
+    "browser-cdn",
+    "browserify-cdn",
+    "module loader",
+    "module",
+    "loader",
+    "cjs",
+    "commonjs"
+  ],
+  "author": "@serapath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serapath/npm-require/issues"
+  },
+  "homepage": "https://github.com/serapath/npm-require#readme",
+}
