@@ -1,7 +1,7 @@
 {
   "name": "npm-require",
   "version": "1.0.0",
-  "description": "commonjs module loader (simplified npm & synchronous global require function for the browser)",
+  "description": "synchronous global require function for the browser to load commonjs modules from a (relative) URL or npm",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/serapath/npm-require/issues"
   },
-  "homepage": "https://github.com/serapath/npm-require#readme",
+  "homepage": "https://github.com/serapath/npm-require#readme"
 }
