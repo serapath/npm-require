@@ -1,8 +1,11 @@
 {
   "name": "npm-require",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "synchronous global require function for the browser to load commonjs modules from a (relative) URL or npm",
-  "main": "index.js",
+  "main": "src/npm-require.js",
+  "scripts": {
+    "start": "budo . --ssl --live --open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serapath/npm-require.git"
@@ -27,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/serapath/npm-require/issues"
   },
-  "homepage": "https://github.com/serapath/npm-require#readme"
+  "homepage": "https://github.com/serapath/npm-require#readme",
+  "devDependencies": {
+    "budo": "^11.4.1"
+  }
 }

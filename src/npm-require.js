@@ -1,4 +1,15 @@
 window.require = (function (modules) {
+  var mypath = document.currentScript.getAttribute('src').split('#').pop()
+  var basepath = window.location.href
+  if (mypath) {
+    try { var basepath = new URL(mypath).href }
+    catch (e) { }
+  }
+  if (basepath === 'about:srcdoc') throw new Error(`
+    when using 'srcdoc=...' you need to provide a custom url to a folder containing JS files of require(...) calls with paths.
+    e.g.
+    <script src="https://unpkg.com/npm-require#https://my.custom.com/folder/for/js/and/json/files/"></script>
+  `)
   var wzrd_URL = 'https://wizardamigos-browserify-cdn.herokuapp.com/multi'
   function init (name, _module) {
     var se = document.createElement('script')
@@ -28,7 +39,10 @@ window.require = (function (modules) {
     return modules[name] = module
   }
   function require (name, version) {
-    if (name[0] === '.' || name[0] === '/') var _name = new URL(name, window.location.href).href
+    if (name[0] === '.' || name[0] === '/') {
+      if (name.slice(-3) !== '.js' || name.slice(-5) !== '.json') name = name + '.js'
+      var _name = new URL(name, basepath).href
+    }
     var realname = (_name || name)
     var module = modules[realname]
     if (module) {
