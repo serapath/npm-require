@@ -23,4 +23,12 @@ if (typeof module === 'object') {
     var test = require('./demo')
     test('hello world')
   }
+  // @TODO: make the stuff below work
+  // require.RELOAD = true
+  // require.VERBOSE = true
+  //
+  // console.error('BEFORE `require`')
+  // var test = require('./test/asdf.js')
+  // console.error('AFTER `require`')
+  // console.log(test)
 }

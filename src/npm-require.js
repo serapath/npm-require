@@ -28,7 +28,7 @@ window.require = (function (modules) {
     window.module = {}
     document.head.appendChild(se)
     document.head.removeChild(se)
-    if (window.require !== require) {
+    if (window.require !== require) { // @TODO: is this block necessary?
       module.exports = window.require(name)
       window.require = require
     } else {

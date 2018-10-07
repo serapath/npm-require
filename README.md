@@ -1,8 +1,25 @@
 # npm-require
-synchronous global require function for the browser to load commonjs modules from a (relative) URL or npm
+synchronous global require function for the browser to load commonjs modules from a (relative) path, a URL or npm
+
+https://www.npmjs.com/package/npm-require
+
+# DEMO (TEST)
+Structure:
+- no folders for different versions
+  - current tests are for current versions
+  - old tests are in version history
+- tests are numbered feature folders
+  - new features get the next version number
+  - retired features get deleted, thus archived into the version histroy
+- a feature folder potentially contains `fixture` folder
+- a feature folder contains a `spec.js` file to describe the feature usage
 
 # TODO
 ```js
+// @TODO: make test/test.html test stuff
+// @TODO: make test/benchmark.html test stuff
+// @TODO: include {test,benchmark}.html as iframes in index.js - where `index.html` is the DEMO PAGE which includes demo and documentation
+
 // @TODO: put `src/index.js` structure into place
 // @TODO: experiment with offlineFirst/ServiceWorker with cross-domain-re-use of modules
 // @TODO: find `package.json` and load all dependencies with their versions
@@ -94,7 +111,8 @@ open issue:
 * https://github.com/nodejs/node/issues/17966
 
 **Official** (not implemented by this module)
-* https://nodejs.org/api/modules.html#modules_all_together
+* nodejs#require https://nodejs.org/api/modules.html#modules_all_together
+* commonJS#require http://wiki.commonjs.org/wiki/Modules/1.1#Module_Context
 
 **Inofficial** (implemented by this module)  
 Follows official spec as closely as possible, but:

@@ -1,10 +1,11 @@
 {
   "name": "npm-require",
-  "version": "1.1.0",
-  "description": "synchronous global require function for the browser to load commonjs modules from a (relative) URL or npm",
+  "version": "1.1.1",
+  "description": "synchronous global require function for the browser to load commonjs modules from a (relative) path, a URL or npm",
   "main": "src/npm-require.js",
   "scripts": {
-    "start": "budo . --ssl --live --open"
+    "start": "budo . --ssl --live --open",
+    "//": "# is this enough? serve-https . -p 1443"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,17 @@
     "package.json",
     "browser-cdn",
     "browserify-cdn",
+    "wzrd",
+    "wzrd.in",
+    "unpkg",
+    "unpkg.com",
     "module loader",
     "module",
     "loader",
     "cjs",
-    "commonjs"
+    "commonjs",
+    "import",
+    "modules"
   ],
   "author": "@serapath",
   "license": "MIT",
