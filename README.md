@@ -3,6 +3,26 @@ synchronous global require function for the browser to load commonjs modules fro
 
 https://www.npmjs.com/package/npm-require
 
+# demo
+```html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="src/npm-require.js"></script>
+  </head>
+  <body>
+    <script>
+      var minixhr = require('minixhr') // from npm
+      var pkg = require('./package.json')
+      var demo = require('./demo') // resolves to `./demo.js`
+      demo(pkg)
+    </script>
+  </body>
+</html>
+```
+
+<!--
 # DEMO (TEST)
 Structure:
 - no folders for different versions
@@ -62,7 +82,7 @@ Structure:
 //   ./routes.js
 //   ./routes.json
 //   ./routes.node
-// 
+//
 // // /home/bytearcher/socket/src/server.js
 // require('async')
 //   /home/bytearcher/socket/src/node_modules/async
@@ -70,7 +90,7 @@ Structure:
 //   /home/bytearcher/node_modules/async
 //   /home/node_modules/async
 //   /node_modules/async
-// 
+//
 //   module.paths
 //   [ '/Users/samer/learn-node/repl/node_modules',
 //     '/Users/samer/learn-node/node_modules',
@@ -170,6 +190,7 @@ NODE_MODULES_PATHS(START)
    d. let I = I - 1
 5. return DIRS
 ```
+-->
 
 # license
 MIT

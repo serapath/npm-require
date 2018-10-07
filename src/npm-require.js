@@ -40,7 +40,7 @@ window.require = (function (modules) {
   }
   function require (name, version) {
     if (name[0] === '.' || name[0] === '/') {
-      if (name.slice(-3) !== '.js' || name.slice(-5) !== '.json') name = name + '.js'
+      if (name.slice(-3) !== '.js' && name.slice(-5) !== '.json') name = name + '.js'
       var _name = new URL(name, basepath).href
     }
     var realname = (_name || name)

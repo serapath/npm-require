@@ -1,6 +1,6 @@
 {
   "name": "npm-require",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "synchronous global require function for the browser to load commonjs modules from a (relative) path, a URL or npm",
   "main": "src/npm-require.js",
   "scripts": {
