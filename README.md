@@ -23,6 +23,12 @@ https://www.npmjs.com/package/npm-require
 ```
 
 <!--
+@TODO: what about internal/local non-published modules?
+
+@TODO: what about more options for src="npm-require#...?..."
+  - so that different registries (or registry proxies) can be set
+  - and all channeled through an iframe/worker for caching?
+
 # DEMO (TEST)
 Structure:
 - no folders for different versions

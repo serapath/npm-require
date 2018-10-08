@@ -12,6 +12,18 @@ if (typeof module === 'object') {
     console.log(x)
 
     console.log(text)
+    var foobar = require('./test/foobar')
+    var bar = require('./test/bar')
+    console.log(foobar)
+    console.log(bar)
+    var url = `${location.href}test/foobar.js`
+    console.log(url)
+    var foobar2 = require(url)
+    console.log(foobar2)
+    url = 'https://unpkg.com/bel'
+    console.log(url)
+    var bel = require(url)
+    console.log(typeof bel)
   }
 } else {
   var basepath = location.href
@@ -20,15 +32,9 @@ if (typeof module === 'object') {
   script.onload = start
   document.head.appendChild(script)
   function start () {
+    require.RELOAD = true // don't cache modules
+    require.VERBOSE = false // true: log more stuff
     var test = require('./demo')
     test('hello world')
   }
-  // @TODO: make the stuff below work
-  // require.RELOAD = true
-  // require.VERBOSE = true
-  //
-  // console.error('BEFORE `require`')
-  // var test = require('./test/asdf.js')
-  // console.error('AFTER `require`')
-  // console.log(test)
 }
